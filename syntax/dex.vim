@@ -32,7 +32,7 @@ syn match dexType "\<[A-Z][a-zA-Z0-9_']*\>"
 syn match dexExpectedOutput "^>.*"
 
 syn region dexProseBlock start="^'" end="\n\n"
-syn sync match dexProseBlockSync grouphere dexProseBlock "^'"
+syn sync minlines=20 maxlines=200
 
 syn match dexLineComment "--.*$"
   \ contains=
